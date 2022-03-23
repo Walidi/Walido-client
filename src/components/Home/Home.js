@@ -37,7 +37,7 @@ function Home () {
       localStorage.clear();
       sessionStorage.clear();
 
-      Axios.get("http://localhost:3001/logout", {
+      Axios.get("https://walido-server.herokuapp.com/logout", {
       }).then((response => {
       console.log(response);
       }
@@ -46,7 +46,7 @@ function Home () {
   }
 
     const getUsers = () => {
-        Axios.get("http://localhost:3001/users", {
+        Axios.get("https://walido-server.herokuapp.com/users", {
           
         headers: {
           "x-access-token": localStorage.getItem("token"),

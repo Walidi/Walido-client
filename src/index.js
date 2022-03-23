@@ -32,7 +32,7 @@ function App () {           //Exact path = Beginning page of the site
 
     const token = localStorage.getItem('token');
 
-    Axios.post("http://localhost:3001/authenticate", {  //End-point for creation request
+    Axios.post("https://walido-server.herokuapp.com/authenticate", {  //End-point for creation request
     token: token, 
     },{withCredentials: true}).then(response => {
       if (!response.data.auth) { //checking for response message

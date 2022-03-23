@@ -67,7 +67,7 @@ function myProfile () {
     localStorage.clear();
     sessionStorage.clear();
 
-    Axios.get("http://localhost:3001/logout", {
+    Axios.get("https://walido-server.herokuapp.com/logout", {
       }).then((response => {
          console.log(response);
        }
@@ -156,7 +156,7 @@ function myProfile () {
 
      else {
 
-      Axios.post("http://localhost:3001/uploadCV", formData,    {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
+      Axios.post("https://walido-server.herokuapp.com/uploadCV", formData,    {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
         (response) => {
           var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
@@ -204,7 +204,7 @@ function myProfile () {
 
     if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!
 
-    Axios.patch("http://localhost:3001/updateMyProfile", {name: name, email: email, phoneNr: phoneNr, 
+    Axios.patch("https://walido-server.herokuapp.com/updateMyProfile", {name: name, email: email, phoneNr: phoneNr, 
     bachelorDegree: bachelorDegree, masterDegree: masterDegree}, 
     {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
     ).then(
@@ -254,7 +254,7 @@ function myProfile () {
     
         if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!
     
-        Axios.patch("http://localhost:3001/updateMyProfile", {name: name, email: email, phoneNr: phoneNr, 
+        Axios.patch("https://walido-server.herokuapp.com/updateMyProfile", {name: name, email: email, phoneNr: phoneNr, 
         bachelorDegree: bachelorDegree, masterDegree: masterDegree}, 
         {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
         ).then(
@@ -286,7 +286,7 @@ function myProfile () {
 
      else {
   
-      Axios.post("http://localhost:3001/uploadCV", formData,    {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
+      Axios.post("https://walido-server.herokuapp.com/uploadCV", formData,    {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
         (response) => {
           var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
@@ -311,7 +311,7 @@ function myProfile () {
     if (user.cvFile == "No file uploaded") {
       }
     else {
-	 	Axios.get('http://localhost:3001/getCV', {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true, responseType: 'blob'}
+	 	Axios.get('https://walido-server.herokuapp.com/getCV', {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true, responseType: 'blob'}
 			).then(
         (response) => {
 		      //Create a Blob from the PDF Stream
@@ -329,7 +329,7 @@ function myProfile () {
         var confirmed = confirm("Do you want to delete " + user.cvFile + " ?");
 
         if (confirmed) {
-          Axios.delete("http://localhost:3001/deleteCV", {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
+          Axios.delete("https://walido-server.herokuapp.com/deleteCV", {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
           ).then(
             (response) => {
               var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
