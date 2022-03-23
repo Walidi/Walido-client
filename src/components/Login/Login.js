@@ -56,8 +56,8 @@ function Login () {
       } 
       else {    //SUCCESS! 
           
-           setLoginStatus(true); //Maybe consider setting it as (response.data.auth) instead of client-dependant: 'true'
            {loginStatus && goToHomeScreen()};
+           setLoginStatus(true); //Maybe consider setting it as (response.data.auth) instead of client-dependant: 'true'
            localStorage.setItem("token", response.data.token); //Json web token is set to user's local storage
            var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
            var name = JSON.stringify(response.data.user[0].name).replace(/^"(.+(?="$))"$/, '$1');
