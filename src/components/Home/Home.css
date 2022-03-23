@@ -1,0 +1,29 @@
+.Home {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background: #e9e9e9;
+    display: flex;
+  }
+
+.Container {
+    padding: 60px;
+    margin: auto;
+    width: 100%;
+    max-width: 520px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgb(9, 42, 104) 0%,
+      rgba(56, 72, 20, 0.9) 59%,
+      rgba(17, 75, 62, 0.9) 100%
+    )
+  }
+
+.buttonContainer {
+    width: 100%;
+    padding: 24px 0;
+  }
