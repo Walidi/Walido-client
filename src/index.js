@@ -53,8 +53,9 @@ function App () {           //Exact path = Beginning page of the site
         setUser({id: id, name: name, email: email, bachelorDegree: bachelorDegree, masterDegree: masterDegree, phoneNr: phoneNr, cvFile: checkCV(cvFile)});
        }
     })
-  });
-
+  }
+  ,[]);
+  
   return (
   <AuthContext.Provider value={[authStatus, setAuthStatus]}>
     <Router>
