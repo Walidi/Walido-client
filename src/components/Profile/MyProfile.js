@@ -114,6 +114,23 @@ function MyProfile () {
     setShowFileSubmit(false); //If cancelled, we return fileSubmission status to default
     setDataChanged(false);
    }
+
+   const handleNameChange = (e) => {
+       setName(e.target.value);
+       setDataChanged(true);
+
+   }
+
+   const handleEmailChange = (e) => {
+       setEmail(e.target.value);
+       setDataChanged(true);
+  }
+  
+  const handlePhoneNrChange = (e) => {
+       setPhoneNr(e.target.value);
+       setDataChanged(true);
+  }
+  
    
   const checkEmail = (email) => {
     if (email != "" && validator.isEmail(email)) {
@@ -419,9 +436,7 @@ function MyProfile () {
   type="text" 
   autoFocus 
   value={name}
-  onChange={(event) => {
-    setName(event.target.value), setDataChanged(true);
-    }}/>
+  onChange={(event) => {handleNameChange(event)}}/>
     <p className="errorMsg">{nameInputStatus}</p>
 
   <label className='editLabel'>Email:</label>
@@ -430,9 +445,7 @@ function MyProfile () {
   type="text" 
   autoFocus 
   value={email}
-  onChange={(event) => {
-    setEmail(event.target.value), setDataChanged(true);
-    }}/>
+  onChange={(event) => {handleEmailChange(event)}}/>
    <p className="errorMsg">{emailInputStatus}</p>
 
   <label className='editLabel'>Phone number:</label>
@@ -443,9 +456,7 @@ function MyProfile () {
   maxLength = "8" 
   onInput={maxLengthCheck} 
   value={phoneNr}
-  onChange={(event) => {
-    setPhoneNr(event.target.value), setDataChanged(true);
-    }}/>
+  onChange={(event) => {handlePhoneNrChange(event)}}/>
    <p className="errorMsg">{phonenrInputStatus}</p>
 
 	</div>
