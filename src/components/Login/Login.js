@@ -55,10 +55,10 @@ function Login () {
        setLoginStatus(false);
       } 
       else {    //SUCCESS! 
-       
-           {loginStatus && goToHomeScreen()
-           localStorage.setItem("token", response.data.token); //Json web token is set to user's local storage
+          
            setLoginStatus(true); //Maybe consider setting it as (response.data.auth) instead of client-dependant: 'true'
+           {loginStatus && goToHomeScreen()};
+           localStorage.setItem("token", response.data.token); //Json web token is set to user's local storage
            var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
            var name = JSON.stringify(response.data.user[0].name).replace(/^"(.+(?="$))"$/, '$1');
            var email = JSON.stringify(response.data.user[0].email).replace(/^"(.+(?="$))"$/, '$1');
@@ -68,7 +68,6 @@ function Login () {
            var cvFile = JSON.stringify(response.data.user[0].cvFile).replace(/^"(.+(?="$))"$/, '$1'); //Consider cutting off data values from file
    
            setUser({id: id, name: name, email: email, bachelorDegree: bachelorDegree, masterDegree: masterDegree, phoneNr: phoneNr, cvFile: checkCV(cvFile)});
-          };
         }
     });
   };
