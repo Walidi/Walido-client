@@ -326,7 +326,7 @@ function MyProfile () {
    }};
 
     const deleteCV = () => {
-        var confirmed = confirm("Do you want to delete " + user.cvFile + " ?");
+        var confirmed = window.confirm("Do you want to delete " + user.cvFile + " ?");
 
         if (confirmed) {
           Axios.delete("https://walido-server.herokuapp.com/deleteCV", {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
