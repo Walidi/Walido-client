@@ -22,7 +22,7 @@ function Registration () {
   const history = useHistory();
 
   useEffect(() => {   //Ensuring we cannot go back to login page when authenticated!
-    if (auth==true) {
+    if (auth===true) {
       history.push('/home');
     } 
     }); 
@@ -34,7 +34,7 @@ function Registration () {
     }
 
   const checkEmail = (email) => {
-      if (email != "" && validator.isEmail(email)) {
+      if (email !== "" && validator.isEmail(email)) {
         return true;
       }
       else {
@@ -60,7 +60,7 @@ function Registration () {
 
     let inputStatusOk = true;
 
-    if (nameReg == "") {
+    if (nameReg === "") {
      setNameInputStatus("Name required!");
        inputStatusOk = false;
     }
@@ -74,17 +74,17 @@ function Registration () {
       inputStatusOk = false;
      }
 
-    if (checkEmail(emailReg) == false) {
+    if (checkEmail(emailReg) === false) {
       setEmailInputStatus("Vald email required!");
       inputStatusOk = false;
     }
 
-    if (passwordReg1 == "") {
+    if (passwordReg1 === "") {
       setPassword1InputStatus("Password required!");
       inputStatusOk = false;
     }
 
-    else if (passwordReg1 != passwordReg2) {
+    else if (passwordReg1 !== passwordReg2) {
       setPassword2InputStatus("Passwords do not match!");
       inputStatusOk = false;
     }

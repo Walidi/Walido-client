@@ -192,7 +192,7 @@ function MyProfile () {
         })
     }} 
 
-    if (showFileSubmit == false && dataChanged == true) {
+    if (showFileSubmit === false && dataChanged === true) {
 
     setEmailInputStatus("");  //Resetting the input-statuses so we can set them again on-press
     setNameInputStatus("");
@@ -200,7 +200,7 @@ function MyProfile () {
 
     let inputStatusOk = true;
 
-    if (name == "") {
+    if (name === "") {
      setNameInputStatus("Name required!");
        inputStatusOk = false;
     }
@@ -214,7 +214,7 @@ function MyProfile () {
       inputStatusOk = false;
      }
 
-    if (checkEmail(email) == false) {
+    if (checkEmail(email) === false) {
       setEmailInputStatus("Vald email required!");
       inputStatusOk = false;
     }
@@ -243,14 +243,14 @@ function MyProfile () {
       });
     }
      }
-      if (showFileSubmit == true && dataChanged == true) {
+      if (showFileSubmit === true && dataChanged === true) {
         setEmailInputStatus("");  //Resetting the input-statuses so we can set them again on-press
         setNameInputStatus("");
         setPhonenrInputStatus("");
     
         let inputStatusOk = true;
     
-        if (name == "") {
+        if (name === "") {
          setNameInputStatus("Name required!");
            inputStatusOk = false;
         }
@@ -264,7 +264,7 @@ function MyProfile () {
           inputStatusOk = false;
          }
     
-        if (checkEmail(email) == false) {
+        if (checkEmail(email) === false) {
           setEmailInputStatus("Vald email required!");
           inputStatusOk = false;
         }
@@ -293,7 +293,7 @@ function MyProfile () {
       {
            alert("File too big!");
       }
-      else if (file.type!= "application/pdf") {
+      else if (file.type!== "application/pdf") {
            alert("Only .pdf files allowed!");
       }
    
@@ -325,7 +325,7 @@ function MyProfile () {
 
    const getCV = () => {
 
-    if (user.cvFile == "No file uploaded") {
+    if (user.cvFile === "No file uploaded") {
       }
     else {
 	 	Axios.get('https://walido-server.herokuapp.com/getCV', {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true, responseType: 'blob'}

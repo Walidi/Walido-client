@@ -1,4 +1,4 @@
-import React, { Component, useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Axios from 'axios';
 import './Home.css'
 import  {withRouter } from 'react-router-dom';
