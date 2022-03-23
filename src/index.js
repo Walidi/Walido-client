@@ -74,7 +74,7 @@ function App () {           //Exact path = Beginning page of the site
   render(
     // wrap root element with context
     <UserProvider>
-      <App />
+      <App /> 
     </UserProvider>,
     rootElement
   );
