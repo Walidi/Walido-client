@@ -1,5 +1,5 @@
 import React, { Component, useContext, useState, useEffect} from 'react';
-import './myProfile.css'
+import './MyProfile.css'
 import Axios from 'axios';
 import  {withRouter } from 'react-router-dom';
 import logo from '../../images/logo.png';
@@ -19,7 +19,7 @@ import {
   NavBtnLink
 } from '../NavBar/NavbarElements';
 
-function myProfile () {
+function MyProfile () {
 
   useEffect(() => { //Ensuring we cannot go back to Profile page when logged out! Already done with protected routing, but double security :D
     if (auth==false) {
@@ -512,4 +512,4 @@ function myProfile () {
     );
 };
 
-export default withRouter(myProfile);
+export default withRouter(MyProfile);

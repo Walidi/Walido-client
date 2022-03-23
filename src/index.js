@@ -5,7 +5,7 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import RegistrationConfirmed from './components/Confirmation/RegistrationConfirmed'
 import Home from './components/Home/Home';
-import myProfile from './components/Profile/myProfile';
+import MyProfile from './components/Profile/MyProfile';
 import ProtectedRoute from './ProtectedRoute';
 import { AuthContext } from './components/Context/AuthContext';
 import Axios from 'axios';
@@ -18,7 +18,7 @@ function App () {           //Exact path = Beginning page of the site
   const {setUser} = useContext(UserContext);
 
 
-  const checkCV = (cvFile) => {
+  const checkCV = (cvFile) => { 
       if (cvFile=="No file uploaded") {
           return cvFile;
       }
@@ -64,7 +64,7 @@ function App () {           //Exact path = Beginning page of the site
       <Route path="/Registration" component={Registration} />
       <Route path ="/Confirmation" component={RegistrationConfirmed}/>
       <ProtectedRoute path="/home" component ={Home} authStatus = {authStatus}/>
-      <ProtectedRoute path = "/myProfile" component={myProfile} authStatus = {authStatus}/>
+      <ProtectedRoute path = "/myProfile" component={MyProfile} authStatus = {authStatus}/>
     </Switch>
     </Router>
   </AuthContext.Provider>
