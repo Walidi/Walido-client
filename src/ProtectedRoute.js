@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
 
 function ProtectedRoute({authStatus: authStatus, component: Component, ...rest}) {

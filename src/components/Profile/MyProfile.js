@@ -1,4 +1,4 @@
-import React, { Component, useContext, useState, useEffect} from 'react';
+import React from 'react';
 import './MyProfile.css'
 import Axios from 'axios';
 import  {withRouter } from 'react-router-dom';
@@ -22,10 +22,10 @@ import {
 function MyProfile () {
 
   useEffect(() => { //Ensuring we cannot go back to Profile page when logged out! Already done with protected routing, but double security :D
-    if (auth==false) {
+    if (auth===false) {
       history.push('/');
         }
-    if (user.cvFile=="No file uploaded") { //If no cv is uploaded, we hide delete icon for obvious reasons
+    if (user.cvFile==="No file uploaded") { //If no cv is uploaded, we hide delete icon for obvious reasons
         setShowDeleteIcon(false);
         setCvUploaded(false);
        }
@@ -133,7 +133,7 @@ function MyProfile () {
   
    
   const checkEmail = (email) => {
-    if (email != "" && validator.isEmail(email)) {
+    if (email !== "" && validator.isEmail(email)) {
       return true;
     }
     else {
@@ -142,7 +142,7 @@ function MyProfile () {
   }
 
   const checkCV = (cvFile) => {
-    if (cvFile=="No file uploaded") {
+    if (cvFile==="No file uploaded") {
         return cvFile;
     }
     else {
@@ -154,7 +154,7 @@ function MyProfile () {
 
    const update = () => {
 
-    if (showFileSubmit == true && dataChanged == false) {
+    if (showFileSubmit === true && dataChanged === false) {
 
       const formData = new FormData();
       formData.append("file", file);
@@ -163,7 +163,7 @@ function MyProfile () {
          {
               alert("File too big!");
          }
-      else if (file.type!= "application/pdf") {
+      else if (file.type!== "application/pdf") {
               alert("Only .pdf files allowed!");
         }
       

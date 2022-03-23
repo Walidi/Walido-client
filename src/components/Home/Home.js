@@ -28,7 +28,7 @@ function Home () {
     useEffect(() => { //Ensuring we cannot go back to Home page when logged out! Already done with protected routing, but double security :D
       console.log(auth);
       console.log('Current user is: ' + user.name);
-      if (auth==false) {
+      if (auth===false) {
         history.push('/');}
       }); 
 

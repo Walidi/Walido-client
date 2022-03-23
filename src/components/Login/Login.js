@@ -18,7 +18,7 @@ function Login () {
   const history = useHistory();
 
   useEffect(() => {   //Ensuring we cannot go back to login page when authenticated!
-    if (loginStatus==true) {
+    if (loginStatus===true) {
       history.push('/home');}
     }); 
 
@@ -27,7 +27,7 @@ function Login () {
   }
 
   const checkCV = (cvFile) => {
-    if (cvFile=="No file uploaded") {
+    if (cvFile==="No file uploaded") {
         return cvFile;
     }
     else {
@@ -41,7 +41,7 @@ function Login () {
   const handleLogin = () => {
     
     
-    if (emailAuth == "" || passwordAuth == "") {   //Dummy check
+    if (emailAuth === "" || passwordAuth === "") {   //Dummy check
       setInputResponse("Fields required!");
       setLoginStatus(false);
      }

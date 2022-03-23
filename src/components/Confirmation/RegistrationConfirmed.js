@@ -10,7 +10,7 @@ function RegistrationConfirmed () {
 
   
   useEffect(() => {   //Ensuring we cannot go back to login page when authenticated!
-    if (auth==true) {
+    if (auth===true) {
       history.push('/home');
     } 
     }); 
