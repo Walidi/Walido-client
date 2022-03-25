@@ -46,7 +46,7 @@ function Login () {
       setLoginStatus(false);
      }
    else
-    Axios.post('https://walido-server.herokuapp.com/login', {
+    Axios.post('https://api-walido.herokuapp.com/login', {
       email: emailAuth,
       password: passwordAuth
     }).then((response)=> {

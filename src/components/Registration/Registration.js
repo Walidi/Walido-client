@@ -96,7 +96,7 @@ function Registration () {
 
     if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!
 
-    Axios.post("https://walido-server.herokuapp.com/register", {   //End-point for creation request
+    Axios.post("https://api-walido.herokuapp.com/register", {   //End-point for creation request
       email: emailReg,
       name:  nameReg, 
       password: passwordReg1,
