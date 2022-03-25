@@ -37,10 +37,10 @@ function App () {           //Exact path = Beginning page of the site
       if (!response.data.auth) { //checking for response message
         setAuthStatus(false); //Login status is 
         localStorage.clear();
-        console.log("NOT LOGGED IN!");
+        console.log(response.data.user);
        } else {
         setAuthStatus(true);  
-        console.log("LOGGED IN!");
+        console.log(response.data.user);
         var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
         var name = JSON.stringify(response.data.user[0].name).replace(/^"(.+(?="$))"$/, '$1');
         var email = JSON.stringify(response.data.user[0].email).replace(/^"(.+(?="$))"$/, '$1');
