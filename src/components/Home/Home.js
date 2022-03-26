@@ -17,7 +17,8 @@ import { UserContext } from '../Context/UserContext';
 
 
 function Home () {
-
+    
+    const url = "https://api-walido.herokuapp.com/";
     const [users, setUsers] = useState([]);
     const [auth, setAuth] = useContext(AuthContext);
 
@@ -37,7 +38,7 @@ function Home () {
       localStorage.clear();
       sessionStorage.clear();
 
-      Axios.get("https://api-walido.herokuapp.com/logout", {
+      Axios.get(url+"logout", {
       }).then((response => {
       console.log(response);
       }
@@ -46,7 +47,7 @@ function Home () {
   }
 
     const getUsers = () => {
-        Axios.get("https://api-walido.herokuapp.com/users", {
+        Axios.get(url+"users", {
           
         headers: {
           "x-access-token": localStorage.getItem("token"),

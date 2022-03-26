@@ -7,7 +7,8 @@ import logo from '../../images/logo.png';
 import { UserContext } from '../Context/UserContext';
 
 function Login () {
- 
+  
+  const url = "https://api-walido.herokuapp.com/"
   const [emailAuth, setEmailAuth] = useState("");
   const [passwordAuth, setPasswordAuth] = useState("");
 
@@ -46,7 +47,7 @@ function Login () {
       setLoginStatus(false);
      }
    else
-    Axios.post('https://api-walido.herokuapp.com/login', {
+    Axios.post(url+'login', {
       email: emailAuth,
       password: passwordAuth
     }).then((response)=> {

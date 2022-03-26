@@ -6,7 +6,8 @@ import  { useHistory } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 
 function Registration () {
-
+  
+  const url = "https://api-walido.herokuapp.com/";
   const [emailReg, setEmailReg] = useState("");
   const [nameReg, setNameReg] = useState("");
   const [passwordReg1, setPasswordReg1] = useState("");
@@ -96,7 +97,7 @@ function Registration () {
 
     if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!
 
-    Axios.post("https://api-walido.herokuapp.com/register", {   //End-point for creation request
+    Axios.post(url+"register", {   //End-point for creation request
       email: emailReg,
       name:  nameReg, 
       password: passwordReg1,
