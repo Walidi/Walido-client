@@ -7,7 +7,7 @@ import { AuthContext } from '../Context/AuthContext';
 
 function Registration () {
   
-  const url = "https://api-walido.herokuapp.com/";
+  const url = "http://localhost:3001/";
   const [emailReg, setEmailReg] = useState("");
   const [nameReg, setNameReg] = useState("");
   const [passwordReg1, setPasswordReg1] = useState("");

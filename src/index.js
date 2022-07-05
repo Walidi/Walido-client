@@ -23,7 +23,7 @@ function App () {           //Exact path = Beginning page of the site
           return cvFile;
       }
       else {
-          return cvFile.substring(14);
+          return cvFile.substring(14);  //If user has an existing CV in serve, we cut off the date time in the filename, then left with filename
       }
   }
   
@@ -31,7 +31,7 @@ function App () {           //Exact path = Beginning page of the site
   useEffect(() => { //Stay logged in, if user is logged in, after refresh
 
     const token = localStorage.getItem('token');
-    Axios.post("https://api-walido.herokuapp.com/authenticate", {  //End-point for creation request
+    Axios.post("http://localhost:3001/authenticate", {  //End-point for creation request
     token: token, 
     },{withCredentials: true}).then(response => {
       if (!response.data.auth) { //checking for response message

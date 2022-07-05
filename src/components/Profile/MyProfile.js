@@ -37,7 +37,7 @@ function MyProfile () {
 
   const history = useHistory();
   
-  const url = "https://api-walido.herokuapp.com/"
+  const url = "http://localhost:3001/";
   //Context data
   const [auth, setAuth] = useContext(AuthContext);
   const {user, setUser} = useContext(UserContext);
@@ -154,7 +154,8 @@ function MyProfile () {
 
 
    const update = () => {
-
+     
+    //If only CV has been uploaded in the updateView:
     if (showFileSubmit === true && dataChanged === false) {
 
       const formData = new FormData();
@@ -192,7 +193,8 @@ function MyProfile () {
 
         })
     }} 
-
+    
+    //If only data has been updated but no CV changes:
     if (showFileSubmit === false && dataChanged === true) {
 
     setEmailInputStatus("");  //Resetting the input-statuses so we can set them again on-press
@@ -244,6 +246,8 @@ function MyProfile () {
       });
     }
      }
+ 
+     //If both CV and data are updated:
       if (showFileSubmit === true && dataChanged === true) {
         setEmailInputStatus("");  //Resetting the input-statuses so we can set them again on-press
         setNameInputStatus("");

@@ -18,7 +18,7 @@ import { UserContext } from '../Context/UserContext';
 
 function Home () {
     
-    const url = "https://api-walido.herokuapp.com/";
+    const url = "http://localhost:3001/";
     const [users, setUsers] = useState([]);
     const [auth, setAuth] = useContext(AuthContext);
 

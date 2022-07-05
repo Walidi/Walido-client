@@ -8,7 +8,7 @@ import { UserContext } from '../Context/UserContext';
 
 function Login () {
   
-  const url = "https://api-walido.herokuapp.com/"
+  const url = "http://localhost:3001/";
   const [emailAuth, setEmailAuth] = useState("");
   const [passwordAuth, setPasswordAuth] = useState("");
 
