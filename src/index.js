@@ -13,9 +13,9 @@ import {UserContext, UserProvider} from './components/Context/UserContext';
 
 function App () {           //Exact path = Beginning page of the site
 
-  const [authStatus, setAuthStatus] = useState(AuthContext);
+  const [authStatus, setAuthStatus] = useState(AuthContext); //Updating authentication as we're reloading
    
-  const {setUser} = useContext(UserContext);
+  const {setUser} = useContext(UserContext);  //Updating and retrieving user as we are 'reloading'
 
 
   const checkCV = (cvFile) => { 
