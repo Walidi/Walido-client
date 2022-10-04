@@ -7,7 +7,7 @@ import { AuthContext } from '../Context/AuthContext';
 
 function Registration () {
   
-  const url = "http://localhost:3001/";
+  const url = "https://walido-server.adaptable.app/";
   const [emailReg, setEmailReg] = useState("");
   const [nameReg, setNameReg] = useState("");
   const [passwordReg1, setPasswordReg1] = useState("");

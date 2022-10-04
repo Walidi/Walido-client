@@ -18,7 +18,7 @@ import { UserContext } from '../Context/UserContext';
 
 function Home () {
     
-    const url = "http://localhost:3001/";
+    const url = "https://walido-server.adaptable.app/";
     const [users, setUsers] = useState([]);
     const [auth, setAuth] = useContext(AuthContext);
 

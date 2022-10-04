@@ -31,7 +31,7 @@ function App () {           //Exact path = Beginning page of the site
   useEffect(() => { //Stay logged in, if user is logged in, after refresh
 
     const token = localStorage.getItem('token');
-    Axios.post("http://localhost:3001/authenticate", {  //End-point for creation request
+    Axios.post("https://walido-server.adaptable.app/authenticate", {  //End-point for creation request
     token: token, 
     },{withCredentials: true}).then(response => {
       if (!response.data.auth) { //checking for response message

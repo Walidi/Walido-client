@@ -37,7 +37,7 @@ function MyProfile () {
 
   const history = useHistory();
   
-  const url = "http://localhost:3001/";
+  const url = "https://walido-server.adaptable.app/";
   //Context data
   const [auth, setAuth] = useContext(AuthContext);
   const {user, setUser} = useContext(UserContext);
