@@ -18,13 +18,16 @@
     "react-pdf": "^5.7.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "serve": "^14.0.1",
     "styled-components": "^5.2.1",
     "validator": "^13.7.0",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --max_old_space_size=4096 build",
+    "dev": "react-scripts --opensl-legacy-provider start",
+    "start": "serve -s build -l $PORT",
+    "build": "react-scripts build",
+    "build-dev": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
