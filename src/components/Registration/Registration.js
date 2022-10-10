@@ -71,12 +71,12 @@ function Registration () {
     }
 
     if (phonenrReg.length < 8) {
-      setPhonenrInputStatus("Vald phone number required!");
+      setPhonenrInputStatus("Valid phone number required!");
       inputStatusOk = false;
      }
 
     if (checkEmail(emailReg) === false) {
-      setEmailInputStatus("Vald email required!");
+      setEmailInputStatus("Valid email required!");
       inputStatusOk = false;
     }
 
