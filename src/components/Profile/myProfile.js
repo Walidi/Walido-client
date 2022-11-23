@@ -152,7 +152,6 @@ function MyProfile () {
     }
 }
 
-
    const update = () => {
      
     //If only CV has been uploaded in the updateView:
