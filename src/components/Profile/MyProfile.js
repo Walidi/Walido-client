@@ -177,6 +177,8 @@ function MyProfile () {
       Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
         (response) => {
+
+          console.log("Code is at 181");
           var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
           var name = JSON.stringify(response.data.user[0].name).replace(/^"(.+(?="$))"$/, '$1');
           var email = JSON.stringify(response.data.user[0].email).replace(/^"(.+(?="$))"$/, '$1');
@@ -185,13 +187,14 @@ function MyProfile () {
           var phoneNr = JSON.stringify(response.data.user[0].phoneNr).replace(/^"(.+(?="$))"$/, '$1');
           var cvFile = JSON.stringify(response.data.user[0].cvFile).replace(/^"(.+(?="$))"$/, '$1');
           var docID = JSON.stringify(response.data.user[0].docID).replace(/^"(.+(?="$))"$/, '$1');
-
+          console.log("code is at 190");
           setUser({id: id, name: name, email: email, bachelorDegree: bachelorDegree, masterDegree: masterDegree, phoneNr: phoneNr,
              cvFile: checkCV(cvFile), docID: docID});
-          console.log("Right before alert!")
+          console.log("code is at 193");
           alert(response.data.message);  //Sending message from server to user
           setShowEditContainer(false);            //Returning to the normal profile view when user click 'ok'
           setShowFileSubmit(false);
+          console.log("code is at 197");
         })
     }} 
     
