@@ -173,7 +173,7 @@ function MyProfile () {
         }
 
      else {
-
+       console.log('code at 176');
       Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
         (response) => {
