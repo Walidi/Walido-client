@@ -188,8 +188,8 @@ function MyProfile () {
 
           setUser({id: id, name: name, email: email, bachelorDegree: bachelorDegree, masterDegree: masterDegree, phoneNr: phoneNr,
              cvFile: checkCV(cvFile), docID: docID});
-          //alert(response.data.message);  //Sending message from server to user
-          alert('ALERT WORKS - FILE UPLOADED!');
+          console.log("Right before alert!")
+          alert(response.data.message);  //Sending message from server to user
           setShowEditContainer(false);            //Returning to the normal profile view when user click 'ok'
           setShowFileSubmit(false);
         })
