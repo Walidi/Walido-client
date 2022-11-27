@@ -23,7 +23,7 @@ function App () {           //Exact path = Beginning page of the site
           return cvFile;
       }
       else {
-          return cvFile.substring(14);  //If user has an existing CV in serve, we cut off the date time in the filename, then left with filename
+          return cvFile;
       }
   }
   

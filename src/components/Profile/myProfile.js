@@ -313,7 +313,7 @@ function MyProfile () {
 
      else {
   
-      Axios.post(url+"uploadCV", formData,    {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
+      Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
         (response) => {
           var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
