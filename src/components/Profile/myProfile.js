@@ -311,9 +311,9 @@ function MyProfile () {
       }
    
       else if (file.name.length > 50) {
-           alert("Filename too long!");
+           alert("Filename too long!");  
      }
-
+ 
      else {
   
       Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
