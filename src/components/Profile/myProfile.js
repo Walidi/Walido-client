@@ -1,5 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react';
-import './MyProfile.css'
+import './myProfile.css'
 import Axios from 'axios';
 import  {withRouter } from 'react-router-dom';
 import logo from '../../images/logo.png';
