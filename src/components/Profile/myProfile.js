@@ -19,7 +19,7 @@ import {
   NavBtnLink
 } from '../NavBar/NavbarElements';
 
-function myProfile () {
+function MyProfile () {
 
   useEffect(() => { //Ensuring we cannot go back to Profile page when logged out! Already done with protected routing, but double security :D
     if (auth===false) {
@@ -540,4 +540,4 @@ function myProfile () {
     );
 };
 
-export default withRouter(myProfile);
+export default withRouter(MyProfile);
