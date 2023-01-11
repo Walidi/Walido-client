@@ -226,7 +226,7 @@ function MyProfile () {
       inputStatusOk = false;
     }
 
-    if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!
+    if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!!
 
     Axios.patch(url+"updateMyProfile", {name: name, email: email, phoneNr: phoneNr, 
     bachelorDegree: bachelorDegree, masterDegree: masterDegree}, 
@@ -310,7 +310,7 @@ function MyProfile () {
            alert("Only .pdf files allowed!");
       }
    
-      else if (file.name.length > 50) {
+      else if (file.name.length > 50) { 
            alert("Filename too long!");  
      }
  
