@@ -173,10 +173,10 @@ function MyProfile () {
         }
 
      else {
-       console.log('code at 176');
+       console.log('code at 176'); //Logging to see if we reach here
       Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
-        (response) => {
+        (response) => { 
 
           console.log("Code is at 181");
           var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
