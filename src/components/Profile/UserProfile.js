@@ -1,5 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react';
-import './MyProfile.css'
+import './UserProfile.css'
 import Axios from 'axios';
 import  {withRouter } from 'react-router-dom';
 import logo from '../../images/logo.png';
@@ -19,7 +19,7 @@ import {
   NavBtnLink
 } from '../NavBar/NavbarElements';
 
-function MyProfile () {
+function UserProfile () {
 
   useEffect(() => { //Ensuring we cannot go back to Profile page when logged out! Already done with protected routing, but double security :D
     if (auth===false) {
@@ -157,7 +157,7 @@ function MyProfile () {
     //If only CV has been uploaded in the updateView:
     if (showFileSubmit === true && dataChanged === false) {
 
-      const formData = new FormData();
+      const formData = new FormData(); 
       formData.append("file", file);
 
       if (file.size > 1000000) 
@@ -173,10 +173,10 @@ function MyProfile () {
         }
 
      else {
-       console.log('code at 176');
-      Axios.post(url+"uploadCV", file, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
+       console.log('code at 176'); //Logging to see if we reach here
+      Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
       ).then(
-        (response) => {
+        (response) => { 
 
           console.log("Code is at 181");
           var id = JSON.stringify(response.data.user[0].id).replace(/^"(.+(?="$))"$/, '$1');
@@ -226,7 +226,7 @@ function MyProfile () {
       inputStatusOk = false;
     }
 
-    if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!
+    if (inputStatusOk) {   //If input status is true I.E no input errors - We send post request!!
 
     Axios.patch(url+"updateMyProfile", {name: name, email: email, phoneNr: phoneNr, 
     bachelorDegree: bachelorDegree, masterDegree: masterDegree}, 
@@ -310,10 +310,10 @@ function MyProfile () {
            alert("Only .pdf files allowed!");
       }
    
-      else if (file.name.length > 50) {
-           alert("Filename too long!");
+      else if (file.name.length > 50) { 
+           alert("Filename too long!");  
      }
-
+ 
      else {
   
       Axios.post(url+"uploadCV", formData, {headers: {"x-access-token": localStorage.getItem("token")},withCredentials: true}
@@ -404,7 +404,7 @@ function MyProfile () {
       </div>
 
 	<div className ="titleContainer">
-	<h1>View and edit your information!</h1>
+	<h1>View and edit your information!</h1> 
 	</div>
   { !showEditContainer && 
   <div>
@@ -540,4 +540,4 @@ function MyProfile () {
     );
 };
 
-export default withRouter(MyProfile);
+export default withRouter(UserProfile);

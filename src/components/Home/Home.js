@@ -77,7 +77,7 @@ function Home () {
         <NavLink to='candidates' activeStyle>
           Candidates 
         </NavLink>
-        <NavLink to='/myProfile' activeStyle>
+        <NavLink to='/userProfile' activeStyle>
           My Profile
         </NavLink>
       </NavMenu>
