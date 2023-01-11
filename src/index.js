@@ -5,10 +5,10 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import RegistrationConfirmed from './components/Confirmation/RegistrationConfirmed'
 import Home from './components/Home/Home';
-import MyProfile from './components/Profile/myProfile';
+import MyProfile from './components/Profile/MyProfile';
 import ProtectedRoute from './ProtectedRoute';
 import { AuthContext } from './components/Context/AuthContext';
-import Axios from 'axios';
+import Axios from 'axios'; 
 import {UserContext, UserProvider} from './components/Context/UserContext';
 
 function App () {           //Exact path = Beginning page of the site

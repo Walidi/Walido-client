@@ -1,5 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react';
-import './myProfile.css'
+import './MyProfile.css'
 import Axios from 'axios';
 import  {withRouter } from 'react-router-dom';
 import logo from '../../images/logo.png';
@@ -157,7 +157,7 @@ function MyProfile () {
     //If only CV has been uploaded in the updateView:
     if (showFileSubmit === true && dataChanged === false) {
 
-      const formData = new FormData();
+      const formData = new FormData(); 
       formData.append("file", file);
 
       if (file.size > 1000000) 
@@ -404,7 +404,7 @@ function MyProfile () {
       </div>
 
 	<div className ="titleContainer">
-	<h1>View and edit your information!</h1>
+	<h1>View and edit your information!</h1> 
 	</div>
   { !showEditContainer && 
   <div>

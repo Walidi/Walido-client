@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 800px;
   min-height: 400px;
-  display: flex;
+  display: flex; 
   justify-content: center;
   background: radial-gradient(
     ellipse at left bottom,
