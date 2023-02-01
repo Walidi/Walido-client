@@ -32,7 +32,7 @@ function Login () {
         return cvFile;
     }
     else {
-        return cvFile.substring(14);
+        return cvFile;
     }
 }
   
